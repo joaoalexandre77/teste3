@@ -1,7 +1,11 @@
+html{
+    scroll-behavior: smooth;
+}
 body{
     padding: 0px;
     margin: 0px;
     background-color: #949494;
+    padding-top: 60px;
 }
 
 .container{
@@ -19,6 +23,11 @@ header{
     right: 0px;
     height: 60px;
     background-color: #000000;
+    z-index: 1;
+}
+
+section{
+    scroll-margin-top: 60px;
 }
 
 .logo{
@@ -34,14 +43,19 @@ header{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px;
     font-weight: 600;
+    padding: 5px 0px 5px 0px;
+    transition: opacity 0.15s;
+}
+
+.links-nav:hover{
+    opacity: 0.5;
 }
 /* PRIMEIRA TELA */
 .part-1{
     display: flex;
     align-items: center;
     justify-content:space-around;
-    height: 1000px;
-    border: 1px solid red;
+    height: 900px;
 }
 
 .titulo-icaro{
@@ -49,18 +63,126 @@ header{
     font-size: 90px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 800;
+    text-shadow: 0px 9px 3px rgba(0, 0, 0, 0.3);
 }
 
 .img-part-1{
     width: 900px;
 }
 
+/* SEGUNDA TELA */
+
+.part-2{
+    display: flex;
+    height: 900px;
+}
+
+.text-part-2{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.title-text{
+    font-size: 70px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #949494;
+}
+
+.p-text{
+    margin-left: 30px;
+    font-size: 35px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #949494;
+}
+
+.image-part-2{
+    flex: 1;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.image{  
+    object-fit: cover;
+    height: 100%;
+}
+ 
+
+/* TERCEIRA TELA */
+
+.part-3{
+    display: flex;
+    height: 900px;
+}
+
+.img-3{
+    height: 400px;
+    margin-top: 15px;
+}
+
+.img-part-3-1{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.img-part-3-2{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    position: relative;    
+}
+
+.title-part-3{
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.p-text-3{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    width: 90%;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.h1-modelos-1{
+    position: absolute;
+    top: 0px;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 50px;
+    display: none;
+}
+
+.h1-modelos-2{
+    position: absolute;
+    top: 0px;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 50px;
+}
+
+
 /* CELULAR PEQUENO */
 @media (max-width:454px){
+
+    /* PRIMEIRA TELA */
+
     .part-1{
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content:stretch;
     }
 
     .titulo-icaro{
@@ -69,31 +191,81 @@ header{
     }
 
     .img-part-1{
-    width: 300px;
-}
+        margin-top: 150px;
+        width: 300px;
+    }
 
-.logo{
-    margin-left: 20px;
-    color: #ffffff;
-}
+    .logo{
+        margin-left: 20px;
+        color: #ffffff;
+    }
 
-.links-nav{
-    color: #ffffff;
-    text-decoration: none;
-    margin-right: 8px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 15px;
-    font-weight: 600;
-}
+    .links-nav{
+        color: #ffffff;
+        text-decoration: none;
+        margin-right: 8px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    /* SEGUNDA TELA */
+
+    .part-2{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .title-text{
+        font-size: 30px;
+    }
+
+    .p-text{
+        font-size: 25px;
+    }
+
+    .image{  
+        height: 100%;
+        width: 100%;
+      }
+    
+    /* TERCEIRA TELA */
+
+    .part-3{
+        display: flex;
+        flex-direction: column;
+        height: 900px;
+    }
+
+    .img-3{
+        height: 240px;
+    }
+    
+    .h1-modelos-1{
+        position: absolute;
+        top: 0px;
+        color: #ffffff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 20px;
+        display: block;
+    }
+
+    .h1-modelos-2{
+        display: none;
+    }
+
+
 }
 
 
 /* CELULAR */
 @media (min-width:455px) and (max-width:576px){
+    
+        /* PRIMEIRA TELA */
     .part-1{
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content:stretch;
     }
 
     .titulo-icaro{
@@ -102,28 +274,130 @@ header{
     }
 
     .img-part-1{
-    width: 450px;
-}
+        width: 450px;
+    }
+
+    /* SEGUNDA TELA */
+
+    .part-2{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .title-text{
+        font-size: 40px;
+    }
+
+    .p-text{
+        font-size: 25px;
+    }
+
+    .image{  
+        height: 100%;
+        width: 100%;
+    }
+
+        
+    /* TERCEIRA TELA */
+
+    .part-3{
+        display: flex;
+        flex-direction: column;
+        height: 900px;
+    }
+
+    .img-3{
+        height: 290px;
+    }
+
+    .h1-modelos-1{
+        position: absolute;
+        top: 0px;
+        color: #ffffff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 30px;
+        display: block;
+    }
+
+    .h1-modelos-2{
+        display: none;
+    }
+
+
+
 }
 
 /* tablets pequenos */
 @media(min-width:577px) and (max-width:768px){
+    
+    /* PRIMEIRA TELA */
+
     .part-1{
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
+
      .titulo-icaro{
         font-size: 79px;
     }
 
     .img-part-1{
-    width: 600px;
+        width: 550px;
+    }
+
+    /* SEGUNDA TELA */
+
+    .part-2{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .title-text{
+        font-size: 50px;
+        margin: 20px;
+    }
+
+    .p-text{
+        font-size: 30px;
+    }
+
+    .image{  
+        height: 100%;
+        width: 100%;
+    }
+
+        /* TERCEIRA TELA */
+
+    .part-3{
+        display: flex;
+        flex-direction: column;
+        height: 900px;
+    }
+
+    .img-3{
+        height: 350px;
+    }
+
+    .h1-modelos-1{
+        position: absolute;
+        top: 0px;
+        color: #ffffff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 30px;
+        display: block;
+    }
+
+    .h1-modelos-2{
+        display: none;
     }
 }
 
 /* Tablet medio */
 @media (min-width: 769px) and (max-width: 992px){
+    
+    /* PRIMEIRA TELA */
+
     .part-1{
         display: flex;
         flex-direction: column;
@@ -137,17 +411,68 @@ header{
 
     .img-part-1{
     
-    width: 700px;
+        width: 700px;
     }
     
     .links-nav{
-    color: #ffffff;
-    text-decoration: none;
-    margin-right: 20px;
+        color: #ffffff;
+        text-decoration: none;
+        margin-right: 20px;
+    }
+
+    /* SEGUNDA TELA */
+
+    .part-2{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .title-text{
+        font-size: 70px;
+        margin: 20px;
+    }
+
+    .p-text{
+        font-size: 35px;
+    }
+
+    .image{  
+        height: 100%;
+        width: 100%;
+    }
+
+    
+    /* TERCEIRA TELA */
+
+    .part-3{
+        display: flex;
+        flex-direction: column;
+        height: 900px;
+    }
+
+    .img-3{
+        height: 450px;
+    }
+
+    .h1-modelos-1{
+        position: absolute;
+        top: 0px;
+        color: #ffffff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 40px;
+        display: block;
+    }
+
+    .h1-modelos-2{
+        display: none;
+    }
 }
-}
+
 /* tela menor */
 @media(min-width:993px) and (max-width: 1200px){
+
+    /* PRIMEIRA TELA */
+
     .part-1{
         display: flex;
         flex-direction: row;
@@ -159,18 +484,68 @@ header{
     }
 
     .img-part-1{
-    width: 550px;
+        width: 550px;
+    }
+
+    /* SEGUNDA TELA */
+
+    .part-2{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .title-text{
+        font-size: 85px;
+        margin: 20px;
+    }
+
+    .p-text{
+        font-size: 35px;
+    }
+
+    .image{  
+        height: 100%;
+        width: 100%;
     }
     
+        
+    /* TERCEIRA TELA */
+
+    .part-3{
+        display: flex;
+        flex-direction: column;
+        height: 900px;
+    }
+
+    .img-3{
+        height: 600px;
+    }
+
+    .h1-modelos-1{
+        position: absolute;
+        top: 0px;
+        color: #ffffff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 40px;
+        display: block;
+    }
+
+    .h1-modelos-2{
+        display: none;
+    }
 }
 /* TELA MAIOR */
 @media(min-width:1201px) and (max-width: 1401px){
+
+    /* PRIMEIRA TELA */
+
     .part-1{
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
     }
+
     .titulo-icaro{
         font-size: 70px;
     }
@@ -178,26 +553,83 @@ header{
     .img-part-1{
     width: 650px;
     }
+
+    /* SEGUNDA TELA */
+
+
+    .title-text{
+        font-size: 50px;
+        margin: 20px;
+    }
+
+    .p-text{
+        font-size: 35px;
+    }
+
+
+    .image{  
+        height: 100%;
+        width: 100%;
+    }
     
+    /* TERCEIRA TELA */
+
+    .part-3{
+        display: flex;
+        height: 900px;
+    }
+
+    .img-3{
+        height: 250px;
+    }
 }
 
 /* TELA GRANDE */
 @media(min-width:1402px) and (max-width: 1600px){
+
+    /* PRIMEIRA TELA */
+
     .part-1{
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
     }
+
     .titulo-icaro{
         font-size: 90px;
     }
 
     .img-part-1{
-    width: 680px;
+        width: 680px;
     }
     
+    /* SEGUNDA TELA */
+
+
+    .title-text{
+        font-size: 60px;
+        margin: 20px;
+    }
+
+    .p-text{
+        font-size: 35px;
+    }
+
+    .image{  
+        height: 100%;
+        width: 100%;
+    }
+    
+        
+    /* TERCEIRA TELA */
+
+    .part-3{
+        display: flex;
+        height: 900px;
+    }
+
+    .img-3{
+        height: 300px;
+    }
 }
-
-
-
